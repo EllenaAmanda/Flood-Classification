@@ -1,0 +1,85 @@
+/* body, html{
+  height: 100%;
+} */
+
+/* .inter-heading1 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+} */
+
+h1, h2, p{
+  font-family: "Inter", sans-serif;
+}
+
+
+h1{
+  color: #5D5FEF;
+  margin: 0px;
+  font-size: 4rem;
+}
+.container{
+  margin: auto;
+  width: 50%;
+  padding: 32px;
+  text-align: center;
+  height: 100vh;
+}
+
+.img-container{
+  width: 480px;
+  border: 2px #757575;
+  border-style: dashed;
+  border-radius: 5px;
+  margin: auto;
+  padding-top: 8%;
+  padding-bottom: 8%;
+  
+}
+
+.button{
+  font-family: "Inter", sans-serif;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #2C2C2C;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+/* phone responsive */
+@media only screen and (max-width: 480px) {
+  .img-container {
+    width: 75%;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2{
+    font-size: 1rem;
+  }
+  .container{
+    margin-top: 20%;
+    padding: 16px;
+    width: 75%;
+  }
+}
+
+/* tablet responsive */
+@media only screen and (max-width: 768px) {
+  .img-container {
+    width: 75%;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h2{
+    font-size: 2rem;
+  }
+  .container{
+    margin-top: 20%;
+    padding: 16px;
+    width: 75%;
+  }
+}
