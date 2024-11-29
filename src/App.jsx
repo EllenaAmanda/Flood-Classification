@@ -9,8 +9,8 @@ function App() {
   return (
     <div className='container'>
       <h1>Image Classification</h1>
-      <h1>For Area Affected by Flood</h1>
-      <h2 style={{fontWeight: "normal"}}>Upload image to detect area affected by flood.</h2>
+      <h1>For Area Affected by Tidal Flood</h1>
+      <h2 style={{fontWeight: "normal"}}>Upload image to detect area affected by tidal flood.</h2>
 
       <Insert />
       <div style={{display: "inline-flex", gap:"24px", marginTop: "24px"}}>
