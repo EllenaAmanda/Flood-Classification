@@ -4,7 +4,7 @@ import Insert from './component/Insert'
 
 function App() {
   const [labels, setLabels] = useState("")
-  const [image, setImage] = useState("")
+  const [imageURL, setImageURL] = useState("")
   const [caption, setCaption] = useState("No image chosen")
   return (
     <div className='container'>
@@ -14,8 +14,8 @@ function App() {
 
       <Insert />
       <div style={{display: "inline-flex", gap:"24px", marginTop: "24px"}}>
-        <button className='button'>Upload Image</button>
-        <p style={{fontStyle: "italic"}}>{caption}</p>
+        <input type='file' accept="image/x-png,image/jpeg" className='attachment' />
+        {/* <p style={{fontStyle: "italic"}}>{caption}</p> */}
       </div>
       
     </div>
