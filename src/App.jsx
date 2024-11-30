@@ -4,6 +4,7 @@ import Insert from './component/Insert'
 
 function App() {
   const [labels, setLabels] = useState("")
+  const [loading, setLoading] = useState(false)
   const [uploadedURL, setUploadedURL] = useState()
 
   const handleUpload = async (event) => {
@@ -12,6 +13,7 @@ function App() {
 
     // Immediately upload the file using the selected file instead of waiting for `file` state
     if (selectedFile) {
+      setLoading(true)
       const data = new FormData();
       data.append("file", selectedFile);
       data.append("upload_preset", "u8jcxkjv"); //nama preset yg dibuat di cloudinary
@@ -36,6 +38,7 @@ function App() {
   useEffect(() => {
     if (uploadedURL) {
       console.log("Uploaded URL:", uploadedURL);
+      setLoading(false)
     }
   }, [uploadedURL]); // Run the effect whenever `uploadedURL` changes
   
@@ -47,7 +50,8 @@ function App() {
       <h1>For Area Affected by Tidal Flood</h1>
       <h2 style={{fontWeight: "normal"}}>Upload image to detect area affected by tidal flood.</h2>
 
-      <Insert />
+      <Insert loadingValue={loading}/>
+      
         <input style={{marginTop:"24px"}} type='file' onChange={handleUpload} accept="image/x-png,image/jpeg" className='attachment' />
       
     </div>

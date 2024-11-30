@@ -72,3 +72,9 @@ input[type="file"] {
   cursor: pointer;
 }
 
+.loading{
+  color:#757575;
+  margin: auto;
+  font-size: xx-large;
+  font-style: italic;
+}
