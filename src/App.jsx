@@ -48,6 +48,13 @@ function App() {
       {/* button to select img file */}
         <input style={{marginTop:"24px"}} type='file' onChange={handleUpload} accept="image/x-png,image/jpeg" className='attachment' />
       
+      {/* labels prediction */}
+      {(labels!=="" && uploadedURL!=="") ? 
+        <div style={{textAlign:'left', marginTop:"32px"}}>
+          <h3>Predicted Labels</h3>
+          <p>{labels}</p>
+        </div>
+        : ""}
       
       
     </div>

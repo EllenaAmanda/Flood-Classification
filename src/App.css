@@ -1,4 +1,4 @@
-h1, h2, p{
+h1, h2, h3, p{
   font-family: "Inter", sans-serif;
 }
 
@@ -8,6 +8,8 @@ h1{
   margin: 0px;
   font-size: 4rem;
 }
+
+
 .container{
   margin-top: 48px;
   margin-left: auto;
