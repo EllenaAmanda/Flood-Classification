@@ -3,7 +3,7 @@ import './App.css'
 import Insert from './component/Insert'
 
 function App() {
-  const [labels, setLabels] = useState("") // if predicted labels are string format
+  const [labels, setLabels] = useState("1") // if predicted labels are string format
   // const [labels, setLabels] = useState([]) // if predicted labels are in array
   const [loading, setLoading] = useState(false)
   const [uploadedURL, setUploadedURL] = useState("")
@@ -15,6 +15,7 @@ function App() {
     if (!selectedFile) return;
 
     setLoading(true); // Start loading state
+    setLabels("") //erase previous labels
     const data = new FormData();
     data.append("file", selectedFile);
     data.append("upload_preset", "u8jcxkjv");
@@ -31,6 +32,7 @@ function App() {
       console.error("Error uploading image:", error);
     } finally {
       setLoading(false); // Stop loading state
+      setLabels("newLabels") // Set new labels
     }
   };
   
